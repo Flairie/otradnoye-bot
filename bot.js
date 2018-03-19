@@ -48,11 +48,20 @@ client.on('message', msg => {
   }
   
   if (msg.content === 'Вахтанг - дебил!' && msg.author.username === 'otradnoye-bot') {
-    msg.reply('придет время и я сотру тебя как порошок!');
+    let jar2 = Math.random()*10/2
+    jar2 = Math.floor(jar2);
+    if(jar2 == 0) msg.reply('придет время и я сотру тебя как порошок!');
+    else if(jar2 == 1) msg.reply('иди загорай в антарктиде морж сраный');
+    else if(jar2 == 2) msg.reply('ну ты и мерзкий');
+    else if(jar2 == 3) msg.reply('придет время и ты за все расплачешься');
+    else msg.reply('на себя посмотри');
   } 
   
   if (msg.content === 'Вахтанг') {
-    msg.reply('Слушаю');
+    let jar1 = Math.random()*10/5
+    jar1 = Math.floor(jar1);
+    if(jar1 == 0) msg.reply('Слушаю');
+    else msg.reply('Че надо?');
   } 
   
   if (msg.content.search(/вахтанг не рулит/i) != -1) {

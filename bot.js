@@ -57,7 +57,7 @@ client.on('message', msg => {
   
   if (msg.content.search(/вахтанг не рулит/i) != -1) {
     let jar = Math.random()*10/3;
-    jar.floor();
+    jar = Math.floor(jar);
     if(jar == 0) msg.reply('СОВСЕМ ИДИОТ ТУПОЙ МРАЗЬ СУКА ТВАРЬ ПОГАНАЯ');
     else if (jar == 1) msg.reply('Как такие дебилы как ты еще живут')
     else if (jar == 2) msg.reply('Я ТЕБЯ УШЛЕПОК ШЛЕПАНЕЦ УБЬЮ ДОМА ПРИХОДИ НА УЛИЦУ НОМЕР ШЕТНАДЦАТЬ!');

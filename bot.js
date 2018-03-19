@@ -55,7 +55,7 @@ client.on('message', msg => {
     msg.reply('Слушаю');
   } 
   
-  if ('вахтанг рулит' in msg.content.toLowerCase()) {
+  if (msg.content.search(/вахтанг рулит/i) != -1) {
     msg.react('👍');
   }
   

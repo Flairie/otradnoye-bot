@@ -40,7 +40,7 @@ client.on('message', msg => {
   }
   
   if (msg.content ==='чё' && msg.author.username == "otradnoye-bot") {
-    msg.reply('БУЙ ЧЕРЕЗ ПЛЕЧЁ');
+    msg.channel.sendMessage('БУЙ ЧЕРЕЗ ПЛЕЧЁ');
   }
   
   if (msg.content ==='БУЙ ЧЕРЕЗ ПЛЕЧЁ' && msg.author.username == "unbugged-otradnoye") {

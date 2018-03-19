@@ -35,7 +35,7 @@ client.on('message', msg => {
     msg.author.unblock();
   } 
   
-  if (msg.content === 'Вахтанг - дебил!' && msg.author.username === 'otradnoe-bot') {
+  if (msg.content === 'Вахтанг - дебил!' && msg.author.username === 'otradnoye-bot') {
     msg.reply('придет время и я сотру тебя как порошок!');
   } 
   

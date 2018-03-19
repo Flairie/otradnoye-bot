@@ -36,7 +36,7 @@ client.on('message', msg => {
   } 
   
   if (msg.content === 'Вы охренели!') {
-    msg.reply('САМ ОХРЕНЕЛ БЛИН НЕЩАСНЫЙ!');
+    msg.reply('САМ ОХРЕНЕЛ БЛИН НЕЩАСНЫЙ!');//((
   }
   
   if (msg.content ==='чё' && msg.author.username == "otradnoye-bot") {

@@ -35,7 +35,7 @@ client.on('message', msg => {
     msg.author.unblock();
   } 
   
-  if (msg.content ==='Вы охренели!') {
+  if (msg.content === 'Вы охренели!') {
     msg.reply('САМ ОХРЕНЕЛ БЛИН НЕЩАСНЫЙ!');
   }
   

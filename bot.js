@@ -39,6 +39,14 @@ client.on('message', msg => {
     msg.reply('САМ ОХРЕНЕЛ БЛИН НЕЩАСНЫЙ!');
   }
   
+  if (msg.content ==='чё' && msg.author.username == "otradnoye-bot") {
+    msg.reply('БУЙ ЧЕРЕЗ ПЛЕЧЁ');
+  }
+  
+  if (msg.content ==='БУЙ ЧЕРЕЗ ПЛЕЧЁ' && msg.author.username == "unbugged-otradnoye") {
+    msg.react('😂');
+  }
+  
   if (msg.content === 'Вахтанг - дебил!' && msg.author.username === 'otradnoye-bot') {
     msg.reply('придет время и я сотру тебя как порошок!');
   } 

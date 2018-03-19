@@ -30,9 +30,13 @@ client.on('message', msg => {
     msg.reply('Damned Otradnoye-bot is the fokkin piece of shut thats fokkin never worked right! Dumnit!');
   }
   
- if (msg.content === 'Вахтанг извини') {
+  if (msg.content === 'Вахтанг извини') {
     msg.reply('Ну лана лана');
     msg.author.unblock();
+  } 
+  
+  if (msg.content === 'Вахтанг - дебил!' && msg.author.username === 'otradnoe-bot') {
+    msg.reply('придет время и я сотру тебя как порошок!');
   } 
   
   if (msg.content === 'Вахтанг') {

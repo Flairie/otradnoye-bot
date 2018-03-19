@@ -43,7 +43,7 @@ client.on('message', msg => {
     msg.channel.sendMessage('БУЙ ЧЕРЕЗ ПЛЕЧЁ');
   }
   
-  if (msg.content ==='БУЙ ЧЕРЕЗ ПЛЕЧЁ' && msg.author.username == "unbugged-otradnoye") {
+  if (msg.content ==='БУЙ ЧЕРЕЗ ПЛЕЧЁ' && msg.author.username == "ubugged-otradnoe") {
     msg.react('😂');
   }
   

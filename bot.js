@@ -20,7 +20,7 @@ client.on('message', msg => {
   
   if(NoPing === 1){
     let chance2 = Math.random()*8;
-    chance2 = Math.floor(chance1);
+    chance2 = Math.floor(chance2);
     if(chance2 == 0) NoPing = false;
   }
   
@@ -91,6 +91,10 @@ client.on('message', msg => {
     
   } else if (msg.content.search(/вахтанг рулит/i) != -1) {
     msg.react('👍');
+  }
+  
+  if (msg.content.search(/банкирский дурень/i) != -1) {
+    msg.react('😄');
   }
   
   if (msg.member.nickname === 'Покровская') {

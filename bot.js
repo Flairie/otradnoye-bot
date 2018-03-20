@@ -12,7 +12,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  let chance3 = Math.random()*11;
+  let chance3 = Math.random()*17;
   chance3 = Math.floor(chance3);
   if(chance3 == 0){
     AskCounter -= 3;
@@ -58,6 +58,7 @@ client.on('message', msg => {
   
   if (msg.content === 'Вахтанг извини') {
     msg.reply('Ну лана лана');
+    AskCounter -= 7;
     msg.author.unblock();
   } 
   

@@ -18,7 +18,7 @@ client.on('message', msg => {
     msg.channel.sendMessage(msg.member.nickname + ' впал в депрессию!');
     
     let chanceKP = Math.random()*7);
-    chanceKP = Math.floor(chance1);
+    chanceKP = Math.floor(chanceKP);
     
     if(DoctorKarlov === 1) chanceKP = -1;
     
@@ -29,6 +29,10 @@ client.on('message', msg => {
     }
     else msg.member.addRole('424064113237295105');
   }
+  
+  if(msg.content === '#Cure'){
+    msg.reply('Только в последний раз!');
+    msg.member.removeRole('424064113237295105');
           
   let chance3 = Math.random()*34;
   chance3 = Math.floor(chance3);

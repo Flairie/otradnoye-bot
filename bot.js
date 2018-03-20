@@ -121,7 +121,7 @@ client.on('message', msg => {
     
   } else if (msg.content.search(/вахтанг рулит/i) != -1) {
     msg.react('👍');
-    AskCounter -= 4;
+    AskCounter -= 3;
   }
   
   if (msg.content.search(/банкирский дурень/i) != -1) {
@@ -161,21 +161,10 @@ client.on('message', msg => {
   
   if (msg.content === 'Вы живете не в том мире в котором вы думаете') {
     var success = false;
-    msg.member.edit({nick: "Купоцый"});
-    
-    //msg.reply(msg.guild.roles.array().length.toString());
-    /*for(var i = 0; i < msg.guild.roles.array().length; i++) {
-      //msg.reply(msg.guild.roles[i].name);
-      *if(msg.server.roles[i].name === 'Купцовский!'){
-        let myRole = msg.guild.roles[i];
-        success = true;
-        break;
-      }
-    }*/
 
     msg.channel.sendMessage('Кто-то открыл ужасную тайну вселенной, и Отрадное погрузилось в уныние. Только Доктор Карлов может его излечить. Он среди вас.');
-    if(success) msg.autor.addRole(myRole).catch(console.error);
-    else msg.reply('нихуя не знаю');
+    msg.member.addRole('424064220213018625');
+    //else msg.reply('нихуя не знаю');
   }
   
 });

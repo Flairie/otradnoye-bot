@@ -18,10 +18,11 @@ client.on('message', msg => {
     AskCounter -= 3;
     if(AskCounter < 0) AskCounter = 0;
     else if(AskCounter > 10) AskCounter = 8;
+    
   }
   
   if (msg.content === 'ping' && NoPing === 0) {
-    let chance1 = Math.random()*8;
+    let chance1 = Math.random()*(20-(AskCounter*2));
     chance1 = Math.floor(chance1);
     if(chance1 == 1) {msg.reply('да задрал в жопу иди'); NoPing = 1;}
     else msg.reply('pong');
@@ -57,13 +58,13 @@ client.on('message', msg => {
   }
   
   if (msg.content === 'Вахтанг извини') {
-    msg.reply('Ну лана лана');
-    AskCounter -= 7;
-    msg.author.unblock();
+    if(AskCounter < 7) {msg.reply('Ну лана лана'); AskCounter -= 7; msg.author.unblock();}
+    else msg.reply('А ВОТ ФИГУШКИ!!');
   } 
   
   if (msg.content === 'Вы охренели!') {
     msg.reply('САМ ОХРЕНЕЛ БЛИН НЕЩАСНЫЙ!');//((
+    AskCounter += 2;
   }
   
   if (msg.content ==='чё' && msg.author.username == "otradnoye-bot") {
@@ -72,16 +73,23 @@ client.on('message', msg => {
   
   if (msg.content ==='БУЙ ЧЕРЕЗ ПЛЕЧЁ' && msg.author.username == "ubugged-otradnoe") {
     msg.react('😂');
+    AskCounter -= 1;
   }
   
   if (msg.content === 'Вахтанг - дебил!' && msg.author.username === 'otradnoye-bot') {
     let jar2 = Math.random()*10/2
     jar2 = Math.floor(jar2);
-    if(jar2 == 0) msg.reply('придет время и я сотру тебя как порошок!');
-    else if(jar2 == 1) msg.reply('иди загорай в антарктиде морж сраный');
-    else if(jar2 == 2) msg.reply('ну ты и мерзкий');
-    else if(jar2 == 3) msg.reply('придет время и ты за все расплачешься');
-    else msg.reply('на себя посмотри');
+    {
+     if(jar2 == 0) msg.reply('придет время и я сотру тебя как порошок!');
+     else if(jar2 == 1) msg.reply('иди загорай в антарктиде морж сраный');
+     else if(jar2 == 2) msg.reply('ну ты и мерзкий');
+     else if(jar2 == 3) msg.reply('придет время и ты за все расплачешься');
+     else msg.reply('на себя посмотри');
+    }
+    
+    
+  
+    AskCounter += 3;
   } 
   
   if (msg.content === 'Вахтанг') {
@@ -107,12 +115,16 @@ client.on('message', msg => {
     else if (jar == 2) msg.reply('Я ТЕБЯ УШЛЕПОК ШЛЕПАНЕЦ УБЬЮ ДОМА ПРИХОДИ НА УЛИЦУ НОМЕР ШЕТНАДЦАТЬ!');
     else msg.reply('Вообще-то рулит');
     
+    AskCounter += 4;
+    
   } else if (msg.content.search(/вахтанг рулит/i) != -1) {
     msg.react('👍');
+    AskCounter -= 4;
   }
   
   if (msg.content.search(/банкирский дурень/i) != -1) {
     msg.react('😄');
+    AskCounter -= 1;
   }
   
   if (msg.member.nickname === 'Покровская') {
@@ -122,10 +134,14 @@ client.on('message', msg => {
  //msg.reply(msg.author.username);
   
   if (msg.content === 'Вахтанг дебил' || msg.content === 'Вахтанг удалил мое сообщение' || msg.content === 'Вахтанг зашкварный') {
-    msg.delete(5);
-    msg.author.send("Я ТИБЯ КАК ПСИНУ ПРИХЛОПНУ!");
-    msg.member.ban(1);
-    msg.author.block();
+    if(AskCounter < 4) {msg.reply('Ты заблуждаешься, я умный'); msg.delete(5);}
+    if(AskCounter >= 4 && AskCounter < 7) msg.author.send("Я ТИБЯ КАК ПСИНУ ПРИХЛОПНУ!");
+    if(AskCounter >= 7) {
+      msg.reply('ЗДОХНИ ОТ СМЕРТИ!!!');
+      msg.member.ban(1);
+      msg.author.block();
+    }
+    AskCounter += 3;
   }
   
   if (msg.content === '/mymoney' && msg.channel.topic === 'Bank-de-koval') {

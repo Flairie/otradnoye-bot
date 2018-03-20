@@ -137,11 +137,11 @@ client.on('message', msg => {
   
   if (msg.content === 'Вахтанг дебил' || msg.content === 'Вахтанг удалил мое сообщение' || msg.content === 'Вахтанг зашкварный') {
     if(AskCounter < 4) {msg.reply('Ты заблуждаешься, я умный');}
-    if(AskCounter >= 4 && AskCounter < 7) {msg.author.send("Я ТИБЯ КАК ПСИНУ ПРИХЛОПНУ!"); msg.delete(5);}
-    if(AskCounter >= 7) {
+    if(AskCounter >= 6) {msg.author.send("Я ТИБЯ КАК ПСИНУ ПРИХЛОПНУ!"); msg.delete(5);}
+    /* if(AskCounter >= 7) {
       msg.reply('ЧТОБ ТЫ ЗДОХ ОТ СМЕРТИ!!!');
       msg.author.block();
-    }
+    }*/
     AskCounter += 3;
   }
   

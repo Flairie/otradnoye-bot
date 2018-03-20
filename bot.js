@@ -11,7 +11,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'ping' && !NoPing) {
+  if (msg.content === 'ping' && NoPing === false) {
     let chance1 = Math.random()*8;
     chance1 = Math.floor(chance1);
     if(chance1 == 1) {msg.reply('да задрал в жопу иди'); NoPing = true;}

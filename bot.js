@@ -12,14 +12,16 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  let chance3 = Math.random()*17;
+  let chance3 = Math.random()*34;
   chance3 = Math.floor(chance3);
+  
   if(chance3 == 0){
     AskCounter -= 3;
-    if(AskCounter < 0) AskCounter = 0;
-    else if(AskCounter > 10) AskCounter = 8;
-    
   }
+  
+  if(AskCounter < 0) AskCounter = 0;
+  else if(AskCounter > 15) AskCounter = 10;
+    
   
   if (msg.content === 'ping' && NoPing === 0) {
     let chance1 = Math.random()*(20-(AskCounter*2));
@@ -134,8 +136,8 @@ client.on('message', msg => {
  //msg.reply(msg.author.username);
   
   if (msg.content === 'Вахтанг дебил' || msg.content === 'Вахтанг удалил мое сообщение' || msg.content === 'Вахтанг зашкварный') {
-    if(AskCounter < 4) {msg.reply('Ты заблуждаешься, я умный'); msg.delete(5);}
-    if(AskCounter >= 4 && AskCounter < 7) msg.author.send("Я ТИБЯ КАК ПСИНУ ПРИХЛОПНУ!");
+    if(AskCounter < 4) {msg.reply('Ты заблуждаешься, я умный');}
+    if(AskCounter >= 4 && AskCounter < 7) {msg.author.send("Я ТИБЯ КАК ПСИНУ ПРИХЛОПНУ!"); msg.delete(5);}
     if(AskCounter >= 7) {
       msg.reply('ЗДОХНИ ОТ СМЕРТИ!!!');
       msg.member.ban(1);

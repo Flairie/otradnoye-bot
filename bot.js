@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 var Kershes = 55;
 var Shvillings = 900000;
-var NoPing = false;
+let NoPing = 0;
 
 
 
@@ -11,14 +11,14 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'ping' && NoPing === false) {
+  if (msg.content === 'ping' && NoPing === 0) {
     let chance1 = Math.random()*8;
     chance1 = Math.floor(chance1);
-    if(chance1 == 1) {msg.reply('да задрал в жопу иди'); NoPing = true;}
+    if(chance1 == 1) {msg.reply('да задрал в жопу иди'); NoPing = 1;}
     else msg.reply('pong');
   }
   
-  if(NoPing){
+  if(NoPing === 1){
     let chance2 = Math.random()*8;
     chance2 = Math.floor(chance1);
     if(chance2 == 0) NoPing = false;

@@ -3,6 +3,7 @@ const client = new Discord.Client();
 var Kershes = 55;
 var Shvillings = 900000;
 let NoPing = 0;
+let AskCounter = 0;
 
 
 
@@ -11,6 +12,14 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
+  let chance3 = Math.random()*11;
+  chance3 = Math.floor(chance3);
+  if(chance3 == 0){
+    AskCounter -= 3;
+    if(AskCounter < 0) AskCounter = 0;
+    else if(AskCounter > 10) AskCounter = 8;
+  }
+  
   if (msg.content === 'ping' && NoPing === 0) {
     let chance1 = Math.random()*8;
     chance1 = Math.floor(chance1);
@@ -75,10 +84,18 @@ client.on('message', msg => {
   } 
   
   if (msg.content === 'Вахтанг') {
-    let jar1 = Math.random()*10/5
-    jar1 = Math.floor(jar1);
-    if(jar1 == 0) msg.reply('Слушаю');
-    else msg.reply('Че надо?');
+    if(AskCounter == 0) msg.reply('Слушаю');
+    else if(AskCounter == 1) msg.reply('Че надо?');
+    else if(AskCounter == 2) msg.reply('Да че тебе надо?');
+    else if(AskCounter == 3) msg.reply('ЧЕ ТЕБЕ СУКА НАДО');
+    else if(AskCounter == 4) msg.reply('ДОСТАЛ');
+    else if(AskCounter == 7) msg.reply('ДА СУКАААААА');
+    else if(AskCounter == 8) msg.reply('какой у тебя узкий слововый ЗАПАС');
+    else if(AskCounter == 9) msg.reply('АААААААААААААА');
+    else msg.reply('Я НАЙДУ ТЕБЯ И УБЬЮ!!!!');
+    
+    
+    AskCounter += 1;
   } 
   
   if (msg.content.search(/вахтанг не рулит/i) != -1) {

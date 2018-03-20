@@ -13,7 +13,7 @@ client.on('message', msg => {
   if (msg.content === 'ping') {
     let chance1 = Math.random()*8;
     chance1 = Math.floor(chance1);
-    if(chance == 1) msg.reply('задрал пингить');
+    if(chance1 == 1) msg.reply('задрал пингить');
     else msg.reply('pong');
   }
   

@@ -4,6 +4,7 @@ var Kershes = 55;
 var Shvillings = 900000;
 let NoPing = 0;
 let AskCounter = 0;
+let KupotsuPandemy = 0;
 
 
 
@@ -12,6 +13,10 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
+  if(KupotsuPandemy == "1" && !msg.member.roles.exists('id', '424064220213018625') {
+    msg.channel.sendMessage(msg.member.nickname + ' впал в депрессию!');
+  }
+          
   let chance3 = Math.random()*34;
   chance3 = Math.floor(chance3);
   
@@ -159,12 +164,20 @@ client.on('message', msg => {
     Kershes += 5;
   }
   
+  if (msg.content === '#StopPandemy') {
+    msg.reply("Ну хорошо хорошо");
+    KupotsuPandemy = 0;
+  }
+  
   if (msg.content === 'Вы живете не в том мире в котором вы думаете') {
     var success = false;
 
     msg.channel.sendMessage('Кто-то открыл ужасную тайну вселенной, и Отрадное погрузилось в уныние. Только Доктор Карлов может его излечить. Он среди вас.');
     msg.member.addRole('424064220213018625');
     //else msg.reply('нихуя не знаю');
+    msg.delete(6);
+    
+    KupotsuPandemy = 1;
   }
   
 });

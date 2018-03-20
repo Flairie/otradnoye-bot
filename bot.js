@@ -13,8 +13,9 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if(KupotsuPandemy == "1" && !msg.member.roles.exists('id', '423957715614826506') && !msg.member.roles.exists('id', '424064220213018625')) {
+  if(KupotsuPandemy == "1" && !msg.member.roles.exists('id', '423957715614826506') && !msg.member.roles.exists('id', '424064113237295105') && !msg.member.roles.exists('id', '424064220213018625')) {
     msg.channel.sendMessage(msg.member.nickname + ' впал в депрессию!');
+    msg.member.addRole('424064113237295105');
   }
           
   let chance3 = Math.random()*34;

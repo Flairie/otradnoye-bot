@@ -11,7 +11,17 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.content === 'ping') {
-    msg.reply('Pong!');
+    let chance1 = Math.random()*8;
+    chance1 = Math.floor(chance1);
+    if(chance == 1) msg.reply('задрал пингить');
+    else msg.reply('pong');
+  }
+  
+  if (msg.content ==='Был у нас, дружище Мирко!' && msg.author.username == "Банкирский") {
+    let chance = Math.random()*8;
+    chance = Math.floor(chance);
+    if(chance == 0) msg.reply('ухх, непонятно');
+    else if (chance == 1) msg.reply('ХВАТИТ БРЕД НЕСТИ ЕЩЕ РАЗ ПРИНЕСЕШЬ Я ТЕБЯ КЛОЧКИ ПО ЗАКОУЛОЧНИКАМ!!!');
   }
 
   if (msg.content === 'What is the wahtang?') {

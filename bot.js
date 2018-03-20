@@ -5,6 +5,7 @@ var Shvillings = 900000;
 let NoPing = 0;
 let AskCounter = 0;
 let KupotsuPandemy = 0;
+let DoctorKarlov = 0;
 
 
 
@@ -13,9 +14,20 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if(KupotsuPandemy == "1" && !msg.member.roles.exists('id', '423957715614826506') && !msg.member.roles.exists('id', '424064113237295105') && !msg.member.roles.exists('id', '424064220213018625')) {
+  if(KupotsuPandemy == "1" && !msg.member.roles.exists('id', '423957715614826506') && !msg.member.roles.exists('id', '424064113237295105') && !msg.member.roles.exists('id', '424064220213018625') && !msg.author.bot) {
     msg.channel.sendMessage(msg.member.nickname + ' впал в депрессию!');
-    msg.member.addRole('424064113237295105');
+    
+    let chanceKP = Math.random()*7);
+    chanceKP = Math.floor(chance1);
+    
+    if(DoctorKarlov === 1) chanceKP = -1;
+    
+    if(chanceKP === 0){
+      msg.author.send("Отрадное: Вы доктор Karlov!, чтобы спасти от депрессии, напишите #Save(\"тег игрока\")");
+      DoctorKarlov = 1;
+      msg.addRole('425637164194463744');
+    }
+    else msg.member.addRole('424064113237295105');
   }
           
   let chance3 = Math.random()*34;

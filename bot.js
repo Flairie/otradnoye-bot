@@ -33,7 +33,7 @@ client.on('message', msg => {
   if(msg.content === '#Cure'){
     msg.reply('Только в последний раз!');
     msg.member.removeRole('424064113237295105');
-          
+  } 
   let chance3 = Math.random()*34;
   chance3 = Math.floor(chance3);
   

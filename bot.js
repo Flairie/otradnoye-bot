@@ -146,7 +146,7 @@ client.on('message', msg => {
  //msg.reply(msg.author.username);
   
   if (msg.content === 'Вахтанг дебил' || msg.content === 'Вахтанг удалил мое сообщение' || msg.content === 'Вахтанг зашкварный') {
-    if(AskCounter < 4) {msg.reply('Ты заблуждаешься, я умный');}
+    if(AskCounter < 4) {msg.reply('Он врёт!');}
     if(AskCounter >= 6) {msg.author.send("Я ТИБЯ КАК ПСИНУ ПРИХЛОПНУ!"); msg.delete(5);}
     /* if(AskCounter >= 7) {
       msg.reply('ЧТОБ ТЫ ЗДОХ ОТ СМЕРТИ!!!');

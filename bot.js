@@ -65,9 +65,9 @@ client.on('message', msg => {
     else if (chance == 1) msg.reply('ХВАТИТ БРЕД НЕСТИ ЕЩЕ РАЗ ПРИНЕСЕШЬ Я ТЕБЯ КЛОЧКИ ПО ЗАКОУЛОЧНИКАМ!!!');
   }
   
-  /*if (msg.content.search(/Нормальный чувак, просто фотка плохая!/i) && msg.author.username === 'otradnoye-bot') {
+  if (msg.content.search(/Нормальный чувак, просто фотка плохая!/i) != -1 && msg.author.username === 'otradnoye-bot') {
     msg.react('😂');
-  }*/
+  }
   
   if (msg.content === 'Вахтанг извини') {
     if(AskCounter < 7) {msg.reply('Ну лана лана'); AskCounter -= 7; msg.author.unblock();}

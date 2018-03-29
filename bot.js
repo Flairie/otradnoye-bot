@@ -64,21 +64,9 @@ client.on('message', msg => {
     if(chance == 0) msg.reply('ухх, непонятно');
     else if (chance == 1) msg.reply('ХВАТИТ БРЕД НЕСТИ ЕЩЕ РАЗ ПРИНЕСЕШЬ Я ТЕБЯ КЛОЧКИ ПО ЗАКОУЛОЧНИКАМ!!!');
   }
-
-  if (msg.content === 'What is the wahtang?') {
-    msg.reply('I, Wahtang, am the keeper of knowleges of Otradnoye. You can ask me about anything here.');
-  }
-
-  if (msg.content === 'What is the legendary roles?') {
-    msg.reply('Legendary role is the role what can be used by an only one person in Otradnoye');
-  }
-
-  if (msg.content === 'What is the battle system?') {
-    msg.reply('Battle System - machanics of Otradnoe that will be added much later');
-  }
- 
-  if (msg.content === 'What is the otradnoye-bot?') {
-    msg.reply('Damned Otradnoye-bot is the fokkin piece of shut thats fokkin never worked right! Dumnit!');
+  
+  if (msg.content.search(/вахтанг не рулит/i)' && msg.author.id == "6322") {
+    msg.react('😂');
   }
   
   if (msg.content === 'Вахтанг извини') {

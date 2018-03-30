@@ -21,10 +21,10 @@ client.on('message', msg => {
     let chanceKP = Math.random()*7;
     chanceKP = Math.floor(chanceKP);
     
-    if(DoctorKarlov === 1) chanceKP = -1;
+    //if(DoctorKarlov === 1) chanceKP = -1;
     
     if(chanceKP === 0){
-      msg.author.send("Отрадное: Вы доктор Karlov!, чтобы спасти от депрессии, напишите #Save(\"тег игрока\")");
+      msg.author.send("Отрадное: Вы доктор Karlov!, чтобы спасти от депрессии, напишите #Save(тег игрока)");
       DoctorKarlov = 1;
       msg.addRole('425637164194463744');
     }

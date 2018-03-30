@@ -11,7 +11,7 @@ let DoctorKarlov = 0;
 
 client.on('ready', () => {
   console.log(`Logged in as ${423868710940311552}!`);
-  client.user.setPresence({ game: { name: 'v1' }});
+  client.user.setPresence({ game: { name: 'v2' }});
 });
 
 client.on('message', msg => {/*
@@ -158,7 +158,7 @@ client.on('message', msg => {/*
   if (msg.content === '/treasury' && msg.channel.topic === 'Treasury of Otradnoye') {
     msg.reply('Бюджет града составляет ' + Shvillings.toString() + ' швиллиногов и ' + Kershes.toString() + ' кершей.');
   }
-  
+  */
   if (msg.content === '/nalogytest' && msg.channel.topic === 'Treasury of Otradnoye') {
     msg.reply('Налоги отправленны.');
     Shvillings += 25000;
@@ -168,7 +168,7 @@ client.on('message', msg => {/*
   if (msg.content === '#StopPandemy') {
     msg.reply("Ну хорошо хорошо");
     KupotsuPandemy = 0;
-  }*/
+  }
   
   if (msg.content === 'Вы живете не в том мире в котором вы думаете') {
     var success = false;

@@ -183,5 +183,5 @@ client.on('message', msg => {
   
 });
 
-client.login(process.env.BOT_TOKEN); // wow вай
+client.login(process.env.BOT_TOKEN); // wow вай 
 

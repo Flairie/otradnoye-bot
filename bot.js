@@ -120,11 +120,11 @@ client.on('message', msg => {
     AskCounter += 1;
   } 
   
-  if (.content.search(/вах танг/i) != -1) {
+  if (msg.content.search(/вах танг/i) != -1) {
     let jar = Math.random()*10/3;
     jar = Math.floor(jar);
     if(jar == 0) msg.reply('АХАХАХАХАХА');
-    else if (jar == 1) msg.reply('Как такие дебилы как ты еще живут')
+    else if (jar == 1) msg.reply('Как такие дебилы как ты еще живут');
     else if (jar == 2) msg.reply('Дегеранат и шутачки дегеранатские');
     else msg.reply('КАКАЯ СМЕШНАЯ ШУТКА');
     

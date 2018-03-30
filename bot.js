@@ -46,7 +46,7 @@ client.on('message', msg => {
   else if(AskCounter > 15) AskCounter = 10;
     
   
-  if (msg.content === 'ping' && NoPing === 0) {
+  /*if (msg.content === 'ping' && NoPing === 0) {
     let chance1 = Math.random()*(20-(AskCounter*2));
     chance1 = Math.floor(chance1);
     if(chance1 == 1) {msg.reply('да задрал в жопу иди'); NoPing = 1;}
@@ -64,9 +64,9 @@ client.on('message', msg => {
     chance = Math.floor(chance);
     if(chance == 0) msg.reply('ухх, непонятно');
     else if (chance == 1) msg.reply('ХВАТИТ БРЕД НЕСТИ ЕЩЕ РАЗ ПРИНЕСЕШЬ Я ТЕБЯ КЛОЧКИ ПО ЗАКОУЛОЧНИКАМ!!!');
-  }/*
+  }
   
-  /*if (msg.content.search(/Нормальный чувак, просто фотка плохая!/i) != -1 && msg.author.username === 'otradnoye-bot') {
+  if (msg.content.search(/Нормальный чувак, просто фотка плохая!/i) != -1 && msg.author.username === 'otradnoye-bot') {
     msg.react('😂');
   }
   
@@ -136,7 +136,7 @@ client.on('message', msg => {
   if (msg.content.search(/банкирский дурень/i) != -1) {
     msg.react('😄');
     AskCounter -= 1;
-  }
+  }*/
   
   if (msg.member.nickname === 'Покровская') {
      if(AskCounter > 6) msg.reply("Тебя здесь не уважают, дорогуша.");
@@ -149,7 +149,7 @@ client.on('message', msg => {
     if(AskCounter >= 6) {msg.author.send("Я ТИБЯ КАК ПСИНУ ПРИХЛОПНУ!"); msg.delete(5);}
     
     AskCounter += 3;
-  } */
+  } 
   
   if (msg.content === '/mymoney' && msg.channel.topic === 'Bank-de-koval') {
     msg.reply('ЗАТКНИСЬ МРАЗЬ!');

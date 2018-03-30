@@ -26,7 +26,7 @@ client.on('message', msg => {
     if(chanceKP === 0){
       msg.author.send("Отрадное: Вы доктор Karlov!, чтобы спасти от депрессии, напишите #Save(тег игрока)");
       DoctorKarlov = 1;
-      msg.addRole('425637164194463744');
+      msg.member.addRole('425637164194463744');
     }
     else msg.member.addRole('424064113237295105');
   }

@@ -75,6 +75,8 @@ client.on('message', msg => {
     else msg.reply('А ВОТ ФИГУШКИ!!');
   } 
   
+  
+  
   if (msg.content === 'Вы охренели!') {
     msg.reply('САМ ОХРЕНЕЛ БЛИН НЕЩАСНЫЙ!');//((
     AskCounter += 2;
@@ -117,6 +119,18 @@ client.on('message', msg => {
     
     AskCounter += 1;
   } 
+  
+  if (.content.search(/вах танг/i) != -1) {
+    let jar = Math.random()*10/3;
+    jar = Math.floor(jar);
+    if(jar == 0) msg.reply('АХАХАХАХАХА');
+    else if (jar == 1) msg.reply('Как такие дебилы как ты еще живут')
+    else if (jar == 2) msg.reply('Дегеранат и шутачки дегеранатские');
+    else msg.reply('КАКАЯ СМЕШНАЯ ШУТКА');
+    
+    AskCounter += 4;
+    
+  }
   
   if (msg.content.search(/вахтанг не рулит/i) != -1) {
     let jar = Math.random()*10/3;

@@ -158,12 +158,12 @@ client.on('message', msg => {/*
   if (msg.content === '/treasury' && msg.channel.topic === 'Treasury of Otradnoye') {
     msg.reply('Бюджет града составляет ' + Shvillings.toString() + ' швиллиногов и ' + Kershes.toString() + ' кершей.');
   }
-  */
+  
   if (msg.content === '/nalogytest' && msg.channel.topic === 'Treasury of Otradnoye') {
     msg.reply('Налоги отправленны.');
     Shvillings += 25000;
     Kershes += 5;
-  }
+  }*/
   
   if (msg.content === '#StopPandemy') {
     msg.reply("Ну хорошо хорошо");

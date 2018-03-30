@@ -30,7 +30,7 @@ client.on('message', msg => {
     }
     else msg.member.addRole('424064113237295105');
   }
-  /*
+  
   if(msg.content === '#Cure'){
     msg.reply('Только в последний раз!');
     msg.member.removeRole('424064113237295105');
@@ -46,7 +46,7 @@ client.on('message', msg => {
   else if(AskCounter > 15) AskCounter = 10;
     
   
-  /*if (msg.content === 'ping' && NoPing === 0) {
+  if (msg.content === 'ping' && NoPing === 0) {
     let chance1 = Math.random()*(20-(AskCounter*2));
     chance1 = Math.floor(chance1);
     if(chance1 == 1) {msg.reply('да задрал в жопу иди'); NoPing = 1;}
@@ -136,7 +136,7 @@ client.on('message', msg => {
   if (msg.content.search(/банкирский дурень/i) != -1) {
     msg.react('😄');
     AskCounter -= 1;
-  }*/
+  }
   
   if (msg.member.nickname === 'Покровская') {
      if(AskCounter > 6) msg.reply("Тебя здесь не уважают, дорогуша.");

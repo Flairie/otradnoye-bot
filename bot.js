@@ -167,7 +167,7 @@ client.on('message', msg => {/*
   if (msg.content === '#StopPandemy') {
     msg.reply("Ну хорошо хорошо");
     KupotsuPandemy = 0;
-  }
+  }*/
   
   if (msg.content === 'Вы живете не в том мире в котором вы думаете') {
     var success = false;
@@ -178,7 +178,7 @@ client.on('message', msg => {/*
     msg.delete(6);
     
     KupotsuPandemy = 1;
-  }*/
+  }
   
 });
 

@@ -149,7 +149,7 @@ client.on('message', msg => {/*
     if(AskCounter >= 6) {msg.author.send("Я ТИБЯ КАК ПСИНУ ПРИХЛОПНУ!"); msg.delete(5);}
     
     AskCounter += 3;
-  } 
+  } */
   
   if (msg.content === '/mymoney' && msg.channel.topic === 'Bank-de-koval') {
     msg.reply('ЗАТКНИСЬ МРАЗЬ!');
@@ -163,7 +163,7 @@ client.on('message', msg => {/*
     msg.reply('Налоги отправленны.');
     Shvillings += 25000;
     Kershes += 5;
-  }*/
+  }
   
   if (msg.content === '#StopPandemy') {
     msg.reply("Ну хорошо хорошо");

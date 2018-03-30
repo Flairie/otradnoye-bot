@@ -11,6 +11,7 @@ let DoctorKarlov = 0;
 
 client.on('ready', () => {
   console.log(`Logged in as ${423868710940311552}!`);
+  client.user.setPresence({ game: { name: 'v1' }});
 });
 
 client.on('message', msg => {/*

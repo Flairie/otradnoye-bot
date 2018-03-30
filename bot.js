@@ -40,7 +40,7 @@ client.on('message', msg => {
   
   if(chance3 == 0){
     AskCounter -= 3;
-  }/*
+  }
   
   if(AskCounter < 0) AskCounter = 0;
   else if(AskCounter > 15) AskCounter = 10;
@@ -64,7 +64,7 @@ client.on('message', msg => {
     chance = Math.floor(chance);
     if(chance == 0) msg.reply('ухх, непонятно');
     else if (chance == 1) msg.reply('ХВАТИТ БРЕД НЕСТИ ЕЩЕ РАЗ ПРИНЕСЕШЬ Я ТЕБЯ КЛОЧКИ ПО ЗАКОУЛОЧНИКАМ!!!');
-  }
+  }/*
   
   /*if (msg.content.search(/Нормальный чувак, просто фотка плохая!/i) != -1 && msg.author.username === 'otradnoye-bot') {
     msg.react('😂');

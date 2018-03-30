@@ -19,7 +19,7 @@ client.on('message', msg => {
     msg.channel.sendMessage(msg.member.nickname + ' впал в депрессию!');
     
     let chanceKP = Math.random()*7;
-    chanceKP = Math.floor(chanceKP);
+    chanceKP = 0; //Math.floor(chanceKP);
     
     //if(DoctorKarlov === 1) chanceKP = -1;
     

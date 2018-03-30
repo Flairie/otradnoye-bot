@@ -65,7 +65,7 @@ client.on('message', msg => {
     else if (chance == 1) msg.reply('ХВАТИТ БРЕД НЕСТИ ЕЩЕ РАЗ ПРИНЕСЕШЬ Я ТЕБЯ КЛОЧКИ ПО ЗАКОУЛОЧНИКАМ!!!');
   }
   
-  if (msg.content.search(/Нормальный чувак, просто фотка плохая!/i) != -1 && msg.author.username === 'otradnoye-bot') {
+  /*if (msg.content.search(/Нормальный чувак, просто фотка плохая!/i) != -1 && msg.author.username === 'otradnoye-bot') {
     msg.react('😂');
   }
   
@@ -98,9 +98,7 @@ client.on('message', msg => {
      else if(jar2 == 3) msg.reply('придет время и ты за все расплачешься');
      else msg.reply('на себя посмотри');
     }
-    
-    
-  
+
     AskCounter += 3;
   } 
   
@@ -148,12 +146,9 @@ client.on('message', msg => {
   if (msg.content === 'Вахтанг дебил' || msg.content === 'Вахтанг удалил мое сообщение' || msg.content === 'Вахтанг зашкварный') {
     if(AskCounter < 4) {msg.reply('Он врёт!');}
     if(AskCounter >= 6) {msg.author.send("Я ТИБЯ КАК ПСИНУ ПРИХЛОПНУ!"); msg.delete(5);}
-    /* if(AskCounter >= 7) {
-      msg.reply('ЧТОБ ТЫ ЗДОХ ОТ СМЕРТИ!!!');
-      msg.author.block();
-    }*/
+    
     AskCounter += 3;
-  }
+  } */
   
   if (msg.content === '/mymoney' && msg.channel.topic === 'Bank-de-koval') {
     msg.reply('ЗАТКНИСЬ МРАЗЬ!');

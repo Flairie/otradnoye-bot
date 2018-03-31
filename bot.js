@@ -145,6 +145,9 @@ client.on('message', msg => {
   } else if (msg.content.search(/вахтанг рулит/i) != -1) {
     msg.react('👍');
     AskCounter -= 3;
+  } else if (msg.content.search(/вахтанг топ/i) != -1) {
+    msg.react('😆');
+    AskCounter -= 3;
   }
   
   if (msg.content.search(/банкирский дурень/i) != -1) {

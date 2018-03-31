@@ -59,11 +59,11 @@ client.on('message', msg => {
     if(chance2 == 0) NoPing = false;
   }
   
-  if (msg.content ==='Эй, Вахтанг, го на пвп!' && msg.author.id == "9382") {
+  if (msg.content ==='Эй, Вахтанг, го на пвп!' && msg.author.username == "otradnoye-bot") {
     let chance = Math.random()*3;
     chance = Math.floor(chance);
     if(chance == 0) msg.reply('нее');
-    else if (chance == 1) {
+    else {
       msg.reply('го');
       let jar = Math.random()*3;
       jar = Math.floor(jar);

@@ -59,6 +59,19 @@ client.on('message', msg => {
     if(chance2 == 0) NoPing = false;
   }
   
+  if (msg.content ==='Эй, Вахтанг, го на пвп!' && msg.author.id == "9382") {
+    let chance = Math.random()*3;
+    chance = Math.floor(chance);
+    if(chance == 0) msg.reply('нее');
+    else if (chance == 1) {
+      msg.reply('го');
+      let jar = Math.random()*3;
+      jar = Math.floor(jar);
+      if(jar === 0) {setTimeout(() => {msg.channel.send("АХАХАХАХАХА ПАЛУЧИЛ МОРЖ ТУПОЙ!!!!") ;}, 89000); setTimeout(() => {msg.channel.send("СВОЛАААААААААААААААААААЧЬ!!!!!") ;}, 100000);}
+      else setTimeout(() => {msg.channel.send("МОРЖ СВОЛАААААААААЧЬ!!!!!!!!1!1!!1") ;}, 80000);
+    }
+  }
+  
   if (msg.content ==='Был у нас, дружище Мирко!' && msg.author.username == "Банкирский") {
     let chance = Math.random()*8;
     chance = Math.floor(chance);

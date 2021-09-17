@@ -106,7 +106,7 @@ client.on('message', msg => {
     AskCounter -= 1;
   }
   
-  if (msg.content === 'Вахтанг - дебил!' && msg.author.username === 'otradnoye-bot') {
+  if (msg.content === 'Вахтанг' && msg.author.username === 'otradnoye-bot') {
     let jar2 = Math.random()*10/2
     jar2 = Math.floor(jar2);
     {
@@ -120,7 +120,7 @@ client.on('message', msg => {
     AskCounter += 3;
   } 
   
-  if (msg.content === 'Вахтанг') {
+  if (msg.content.search(/вахтанг/i)) {
     if(AskCounter == 0) msg.reply('Слушаю');
     else if(AskCounter == 1) msg.reply('Че надо?');
     else if(AskCounter == 2) msg.reply('Да че тебе надо?');
@@ -129,8 +129,10 @@ client.on('message', msg => {
     else if(AskCounter == 7) msg.reply('ДА СУКАААААА');
     else if(AskCounter == 8) msg.reply('какой у тебя узкий слововый ЗАПАС');
     else if(AskCounter == 9) msg.reply('АААААААААААААА');
-    else msg.reply('Я НАЙДУ ТЕБЯ И УБЬЮ!!!!');
-    
+    else {
+      msg.reply('Я НАЙДУ ТЕБЯ И УБЬЮ!!!!');
+      msg.delete();
+    }
     
     AskCounter += 1;
   } 

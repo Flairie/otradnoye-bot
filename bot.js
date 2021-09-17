@@ -165,9 +165,9 @@ client.on('message', msg => {
     AskCounter -= 3;
   }
   
-  if (msg.content.search(/банкирский дурень/i) != -1) {
-    msg.react('😄');
-    AskCounter -= 1;
+  if (msg.content.search(/басина/i) != -1) {
+    msg.react('😠');
+    AskCounter += 1;
   }
   
   if (msg.member.nickname === 'Покровская') {

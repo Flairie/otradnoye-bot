@@ -120,7 +120,7 @@ client.on('message', msg => {
     AskCounter += 3;
   } 
   
-  if (msg.content.search(/вахтанг/i)) {
+  if (msg.content == "/вахтанг/") {
     if(AskCounter == 0) msg.reply('Слушаю');
     else if(AskCounter == 1) msg.reply('Че надо?');
     else if(AskCounter == 2) msg.reply('Да че тебе надо?');

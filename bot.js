@@ -88,7 +88,9 @@ client.on('message', msg => {
     else msg.reply('А ВОТ ФИГУШКИ!!');
   } 
   
-  
+  if (msg.content === 'Кринж') {
+    msg.send('Кринж');
+  } 
   
   if (msg.content === 'Вы охренели!') {
     msg.reply('САМ ОХРЕНЕЛ БЛИН НЕЩАСНЫЙ!');//((

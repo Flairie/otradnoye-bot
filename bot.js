@@ -89,7 +89,7 @@ client.on('message', msg => {
   } 
   
   if (msg.content === 'Кринж') {
-    msg.send('Кринж');
+    msg.reply('Кринж');
   } 
   
   if (msg.content === 'Вы охренели!') {

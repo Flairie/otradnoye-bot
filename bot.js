@@ -42,6 +42,12 @@ client.on('message', msg => {
     AskCounter -= 3;
   }
   
+  if (msg.content.search(/@everyone/i) != -1) {
+    msg.reply("ЗАТКНИСЬ!");
+    AskCounter += 3;
+
+  }
+  
   if(AskCounter < 0) AskCounter = 0;
   else if(AskCounter > 15) AskCounter = 10;
     
